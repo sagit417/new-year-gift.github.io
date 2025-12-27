@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>🎉 Happy New Year</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
+    <h1 class="title">Happy New Year</h1>
+    <h2 class="subtitle">Degens Open Your Gift</h2>
 
-<canvas id="fireworks"></canvas>
+    <div class="card">
+      <div id="countdown" class="countdown"></div>
+      <button id="giftBtn" class="gift-btn" disabled>Open Gift 🎁</button>
+      <p id="giftMessage" class="gift-message"></p>
+    </div>
 
-<div class="container">
-  <h1 class="title">🎉 Happy New Year</h1>
-  <h2 class="subtitle">Degens Open Your Gift 🎁</h2>
-
-  <div id="countdown">⏳ Loading countdown...</div>
-
-  <div id="giftBox" class="gift locked">🎁</div>
-
-  <div id="result"></div>
-
-  <div class="links">
-    <a href="https://yourcoinlink.com" target="_blank">🪙 Coin</a>
-    <a href="https://twitter.com/yourhandle" target="_blank">🐦 Twitter</a>
-    <a href="https://t.me/yourtelegram" target="_blank">💬 Telegram</a>
+    <div class="links">
+      <a href="#" target="_blank">Coin</a>
+      <a href="#" target="_blank">Twitter</a>
+      <a href="#" target="_blank">Telegram</a>
+    </div>
   </div>
-</div>
 
-<!-- Friendly Reminder -->
-<div class="reminder">
-  🎉 <strong>Friendly Reminder</strong><br>
-  one gift per user 🎁 · no signup needed 😎 · just vibes 😄<br>
-  come back when timer ends and claim your gift 🎁
-</div>
+  <footer>
+    One gift per user 🎁. No signup needed 😎. Just vibes 😄. Come back when countdown ends and claim your gift 🎁.
+  </footer>
 
-<script src="script.js"></script>
+  <canvas id="fireworksCanvas"></canvas>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
 
