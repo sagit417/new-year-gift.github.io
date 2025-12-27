@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -5,17 +6,33 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #ff0080, #000);
-  height: 100vh;
   font-family: "Comic Sans MS", cursive, sans-serif;
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
+
+  /* Scrollable premium background image */
+  background: url('background.jpg') no-repeat center top;
+  background-size: cover;
+  background-attachment: scroll;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35); /* subtle overlay for readability */
+  pointer-events: none;
+  z-index: 0;
 }
 
 canvas {
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
 }
 
 .container {
@@ -26,7 +43,7 @@ canvas {
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.5);
   padding: 32px;
   border-radius: 22px;
   border: 2px solid gold;
@@ -98,7 +115,7 @@ canvas {
   text-shadow: 0 0 10px gold;
 }
 
-/* 🎉 Friendly Reminder Bar */
+/* Friendly Reminder Bar */
 .reminder {
   position: fixed;
   bottom: 10px;
